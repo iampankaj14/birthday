@@ -1,0 +1,69 @@
+body {
+    background-color: #ffccf9; /* Soft pastel pink background */
+    color: #1e3a8a;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    margin: auto;
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+}
+
+#surpriseButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+#surpriseButton:hover {
+    background-color: #0277bd;
+}
+
+#balloons {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    height: 300px;
+    border: 2px dashed #0288d1;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.2;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.clouds {
+    position: absolute;
+    top: 20%;
+    left: -100%;
+    width: 100%;
+    height: 150px;
+    background: url('https://www.transparenttextures.com/patterns/clouds.png');
+    opacity: 0.7;
+    animation: moveClouds 80s linear infinite; /* Slower animation */
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes moveClouds {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
